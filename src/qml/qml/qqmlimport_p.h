@@ -400,7 +400,7 @@ QQmlImportDatabase::LocalQmldirResult QQmlImportDatabase::locateLocalQmldir(
                 // is changed at this point to make sure it will match later on in that case.
                 if (qmldirAbsoluteFilePath.startsWith(QStringLiteral("//"))) {
                     qmldirAbsoluteFilePath = QUrl::fromLocalFile(qmldirAbsoluteFilePath)
-                            .toString(QUrl::RemoveScheme);
+                            .toLocalFile();
                 }
             }
 
